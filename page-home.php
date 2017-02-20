@@ -96,7 +96,11 @@
             </div>
 
             <!-- /main-wrapper -->
-              <?php get_sidebar(); ?>
+            <aside class='sidebar-wrapper'>
+                <div class='sidebar section' id='sidebar'>
+                    <?php get_sidebar('right'); ?>
+                </div>
+            </aside>
             <div class='clr'></div>
         </div>
         <!-- /ct-wrapper -->

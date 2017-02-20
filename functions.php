@@ -2,6 +2,7 @@
 add_theme_support( 'menus' );
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'custom-header' );
+add_theme_support( 'widgets' );
 
 function register_theme_menus() {
   register_nav_menus(
@@ -30,5 +31,21 @@ add_action('init', 'register_theme_menus');
       //  wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js', array( 'jquery', 'bootstrap_js'), '', true );
    }
   add_action( 'wp_enqueue_scripts', 'wpv_theme_js' );
+
+  $widj = array(
+  	'name'          => __( 'right-sidebar', 'sideb' ),
+  	'id'            => 'sid-12',
+  	'description'   => '',
+          'class'         => '',
+  	'before_widget' => '<li id="%1$s" class="widget %2$s">',
+  	'after_widget'  => '</li>',
+  	'before_title'  => '<h2 class="widgettitle">',
+  	'after_title'   => '</h2>' );
+
+    register_sidebar($widj);
+
+
+
+
 
  ?>
