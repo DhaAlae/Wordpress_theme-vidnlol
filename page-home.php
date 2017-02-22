@@ -28,12 +28,13 @@
                             <?php if( $query->have_posts() ){
                                  while ( $query->have_posts() ) : $query->the_post();
                                    ?>
-                            <div class='post-outer shareable-class'>
+                            <div class='post-outer shareable-class' style="width:100%;">
                                 <article class='post hentry'>
                                     <link href='<?php the_permalink(); ?>' itemprop='mainEntityOfPage' />
                                     <div class='post-thumb'>
                                         <a href='<?php the_permalink(); ?>'>
-                                            <div class='thumb' style='background-image: url(<?php the_post_thumbnail_url( 'large' ); ?> );'></div>
+                                            <!-- <div class='thumb' style='background-image: url(<?php the_post_thumbnail_url( 'full' ); ?> );'></div> -->
+                                            <img style="align:center;" src="<?php the_post_thumbnail_url( 'full' ); ?>" alt="">
                                         </a>
                                     </div>
                                     <div class='post-inner'>
@@ -81,16 +82,11 @@
                         <div class='clr'></div>
                         <div class='blog-pager' id='blog-pager'>
                             <span id='blog-pager-older-link'>
-                              <a class='blog-pager-older-link' href='' id='Blog1_blog-pager-older-link' title='Older Posts'>Older Posts</a>
+                              <!-- <a class='blog-pager-older-link' href='' id='Blog1_blog-pager-older-link' title='Older Posts'>Older Posts</a> -->
                             </span>
                             <!-- <a class='home-link' href='index.html'>Home</a> -->
                         </div>
                         <div class='clear'></div>
-                        <script type="text/javascript">
-                            window.___gcfg = {
-                                'lang': 'en_GB'
-                            };
-                        </script>
                     </div>
                 </div>
             </div>

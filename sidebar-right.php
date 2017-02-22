@@ -14,75 +14,34 @@
 
           <div class='widget-content popular-posts'>
               <ul>
+                <?php
+                $p = 0;
+                $param = array(
+                   'post_type' => 'publication',
+                   'orderby' => 'comment_count'
+                  );
+                  $quer = new WP_Query( $param );
+                  if( $quer->have_posts() ){
+                       while ( $p < 5 && $quer->have_posts() ) : $quer->the_post();
+                  ?>
                   <li>
                       <div class='item-thumbnail-only'>
                           <div class='item-thumbnail'>
-                              <a href='2016/12/she-stared-through-window-at-stars.html' target='_blank'>
-                                  <img alt='' border='0' src='' />
+                              <a href='<?php the_permalink(); ?>' target='_blank'>
+                                  <img alt='' border='0' src='<?php the_post_thumbnail_url( 'thumbnail' ); ?>' />
                               </a>
                           </div>
-                          <div class='item-title'><a href='2016/12/she-stared-through-window-at-stars.html'>She stared through the window at the stars</a></div>
+                          <div class='item-title'><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></div>
                       </div>
                       <div style='clear: both;'></div>
                   </li>
-
-                  <li>
-                      <div class='item-thumbnail-only'>
-                          <div class='item-thumbnail'>
-                              <a href='2016/12/my-folks-were-always-on-me-to-groom.html' target='_blank'>
-                                  <img alt='' border='0' src='../1.bp.blogspot.com/-5Q3RFjOLcbw/WFn-zEW1fmI/AAAAAAAADq8/rRA34ZEnzXMvFbrlnNQqZfgN8IzuJpNRwCLcB/w72-h72-p-k-nu/pexels-photo-175696.jpeg' />
-                              </a>
-                          </div>
-                          <div class='item-title'><a href='2016/12/my-folks-were-always-on-me-to-groom.html'>My folks were always on me to groom myself</a></div>
-                      </div>
-                      <div style='clear: both;'></div>
-                  </li>
-
-                  <li>
-                      <div class='item-thumbnail-only'>
-                          <div class='item-thumbnail'>
-                              <a href='2016/12/my-two-natures-had-memory-in-common.html' target='_blank'>
-                                  <img alt='' border='0' src='../2.bp.blogspot.com/-Ml5jTMswWMM/WFn-z7cP4gI/AAAAAAAADrE/nhXpum6-QAMdrWKDF3uQ1IzIpkJtLkGqwCLcB/w72-h72-p-k-nu/pexels-photo-179912.jpeg' />
-                              </a>
-                          </div>
-                          <div class='item-title'><a href='2016/12/my-two-natures-had-memory-in-common.html'>My two natures had memory in common</a></div>
-                      </div>
-                      <div style='clear: both;'></div>
-                  </li>
-
-                  <li>
-                      <div class='item-thumbnail-only'>
-                          <div class='item-thumbnail'>
-                              <a href='2016/12/the-recorded-voice-scratched-in-speaker.html' target='_blank'>
-                                  <img alt='' border='0' src='../3.bp.blogspot.com/--1EP_5eR_rU/WFn-xwtg4pI/AAAAAAAADqw/C-uttsCpcRYajLMj_jIO61TUYk_TisZVgCLcB/w72-h72-p-k-nu/fashion-person-woman-hand.jpg' />
-                              </a>
-                          </div>
-                          <div class='item-title'><a href='2016/12/the-recorded-voice-scratched-in-speaker.html'>The recorded voice scratched in the speaker</a></div>
-                      </div>
-                      <div style='clear: both;'></div>
-                  </li>
-
-                  <li>
-                      <div class='item-thumbnail-only'>
-                          <div class='item-thumbnail'>
-                              <a href='2016/12/waves-flung-themselves-at-blue-evening.html' target='_blank'>
-                                  <img alt='' border='0' src='../2.bp.blogspot.com/-R2jCJs442b0/WFn-0skGSkI/AAAAAAAADrM/t5WBMxNU2d8wAlQ3n06BP_z5yyVsEamsACLcB/w72-h72-p-k-nu/pexels-photo-217860.jpeg' />
-                              </a>
-                          </div>
-                          <div class='item-title'><a href='2016/12/waves-flung-themselves-at-blue-evening.html'>Waves flung themselves at the blue evening</a></div>
-                      </div>
-                      <div style='clear: both;'></div>
-                  </li>
+                <?php
+                $p++;
+               endwhile;
+              }
+              wp_reset_postdata();?>
 
               </ul>
-              <div class='clear'></div>
-              <span class='widget-item-control'>
-                <span class='item-control blog-admin'>
-                  <a class='quickedit' href=''>
-                    <img alt='' height='18' src='../resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
-                  </a>
-                </span>
-              </span>
               <div class='clear'></div>
           </div>
       </div>
@@ -92,41 +51,92 @@
         <div class='widget HTML' data-version='1' id='HTML1'>
             <div class='widget-content'>
                 <a href="#" style="text-align: center; display: block;">
-                  <img src="images/index-1.jpg" />
+                  <img src="http://localhost/vidnlol/wp-content/uploads/2017/02/ad-sidebar.png" />
                 </a>
             </div>
-            <div class='clear'></div>
-            <span class='widget-item-control'>
-              <span class='item-control blog-admin'>
-                <a class='quickedit' href=''>
-                  <img alt='' height='18' src='../resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
-                </a>
-              </span>
-            </span>
             <div class='clear'></div>
         </div>
         <!-- end of ad div -->
 
+        <!-- social media div -->
+        <div class='widget HTML' data-version='1' id='HTML1'>
+          <div class="widget-title">
+            <h2>Stay social with us</h2>
+          </div>
+            <div class='widget-content'>
+                <ul class="social-icons">
+                  <li>
+                    <a href="https://www.facebook.com/vidnlol" class="social-icon" target="_blank">
+                       <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="social-icon" target="_blank">
+                       <i class="fa fa-twitter"></i>
+                     </a>
+                   </li>
+                  <li>
+                    <a href="" class="social-icon" target="_blank">
+                       <i class="fa fa-rss"></i>
+                     </a>
+                   </li>
+                  <li>
+                    <a href="" class="social-icon" target="_blank">
+                       <i class="fa fa-youtube"></i>
+                     </a>
+                   </li>
+                  <li>
+                    <a href="" class="social-icon" target="_blank">
+                       <i class="fa fa-linkedin"></i>
+                     </a>
+                   </li>
+                  <li>
+                    <a href="" class="social-icon" target="_blank">
+                       <i class="fa fa-google-plus"></i>
+                     </a>
+                   </li>
+                </ul>
+            </div>
+            <div class='clear'></div>
+        </div>
+        <!-- end of social media div -->
+
         <!-- random posts div -->
-          <div class='widget HTML' data-version='1' id='HTML3'>
+          <div class='widget PopularPosts' data-version='1' id='HTML3'>
             <div class="widget-title">
               <h2 class='title'>Random Posts</h2>
             </div>
-              <div class='widget-content'>
-                <?php
-                // wp_get_sidebars_widgets();
-                // the_widget('WP_Widget_Random_Posts');
-                
-                 ?>
+              <div class='widget-content popular-posts'>
+                <ul>
+                  <?php
+                     $args = array(
+                       'orderby' 				=> 'rand',
+                       'post_type' => 'publication'
+                     );
+                     $query = new WP_Query($args);
+                     $q = 0;
+                     if( $query->have_posts() ){
+                          while ( $q < 5 && $query->have_posts() ) : $query->the_post();
+                   ?>
+                    <li>
+                        <div class='item-thumbnail-only'>
+                            <div class='item-thumbnail'>
+                                <a href='<?php the_permalink(); ?>' target='_blank'>
+                                    <img alt='' border='0' src='<?php the_post_thumbnail_url( 'thumbnail' ); ?>' />
+                                </a>
+                            </div>
+                            <div class='item-title'><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></div>
+                        </div>
+                        <div style='clear: both;'></div>
+                    </li>
+                    <?php
+                    $q++;
+                      endwhile;
+                     }
+                     wp_reset_postdata();
+                  ?>
+                </ul>
               </div>
-              <div class='clear'></div>
-              <span class='widget-item-control'>
-                <span class='item-control blog-admin'>
-                  <a class='quickedit' href='' >
-                    <img alt='' height='18' src='../resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
-                  </a>
-                </span>
-              </span>
               <div class='clear'></div>
           </div>
           <!-- end of random posts div  -->

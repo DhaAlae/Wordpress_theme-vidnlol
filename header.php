@@ -1,31 +1,15 @@
 <!DOCTYPE html>
 <html class='v2' dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
-
-<!-- Mirrored from eikon-demo2.blogspot.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Feb 2017 14:17:26 GMT -->
-<!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <!-- /Added by HTTrack -->
 
 <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-    <meta content='blogger' name='generator' />
-    <link href='favicon.ico' rel='icon' type='image/x-icon' />
-    <!--[if IE]><script type="text/javascript" src="https://www.blogger.com/static/v1/jsbin/844239678-ieretrofit.js"></script>
-<![endif]-->
-    <meta content='' property='og:url' />
-    <meta content='Vidnlol' property='og:title' />
-    <meta content='Funny Videos and pics' property='og:description' />
-    <!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
-    <title>
+  <title>
         <?php wp_title(); ?>
     </title>
     <meta charset='UTF-8' />
     <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport' />
-    <meta content='Vidnlol' property='og:site_name' />
-    <meta content='' name='twitter:domain' />
-    <meta content='' name='twitter:title' />
-    <meta content='summary' name='twitter:card' />
-    <meta content='' name='twitter:title' />
     <?php wp_head(); ?>
     <?php wp_footer(); ?>
 <!--</body>-->
@@ -36,7 +20,7 @@
       <div class='widget HTML' data-version='1' id='HTML100'>
           <div class='widget-content'>
               <div class='ct-wrapper'>
-                  <a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/index.jpg" /></a>
+                  <a href=""><img src="http://localhost/vidnlol/wp-content/uploads/2017/02/index.jpg" /></a>
               </div>
           </div>
           <div class='clr'></div>
