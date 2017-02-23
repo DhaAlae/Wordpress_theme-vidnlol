@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html class='v2' dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-<!-- /Added by HTTrack -->
-
-<head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+<html <?php language_attributes(); ?> class="no-js">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport' />
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
+  <head>
+    <link rel="icon" href="/favicon.ico">
   <title>
         <?php wp_title(); ?>
-    </title>
-    <meta charset='UTF-8' />
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport' />
+  </title>
+
     <?php wp_head(); ?>
     <?php wp_footer(); ?>
 <!--</body>-->

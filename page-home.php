@@ -30,20 +30,23 @@
                                    ?>
                             <div class='post-outer shareable-class' style="width:100%;">
                                 <article class='post hentry'>
-                                    <link href='<?php the_permalink(); ?>' itemprop='mainEntityOfPage' />
                                     <div class='post-thumb'>
+                                      <?php
+                                      if( get_field('video')): ?>
+                                        <div class="vid-container">
+                                          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/<?php the_field('video'); ?>"></iframe>
+                                        </div>
+                                      <?php else: ?>
                                         <a href='<?php the_permalink(); ?>'>
                                             <!-- <div class='thumb' style='background-image: url(<?php the_post_thumbnail_url( 'full' ); ?> );'></div> -->
                                             <img style="align:center;" src="<?php the_post_thumbnail_url( 'full' ); ?>" alt="">
                                         </a>
+                                        <?php endif; ?>
                                     </div>
                                     <div class='post-inner'>
                                         <div class='post-header'>
-                                            <meta content='Chandeep J' itemprop='author' />
                                             <span class='post-labels post-meta'>
                                               <?php the_category(' ','',''); ?>
-                                              <!-- <a href='search/label/Travel.html' rel='tag'>Travel</a> -->
-
                                             </span>
                                             <span class='post-timestamp'>
                                             <span class='fa fa-clock-o'></span>
