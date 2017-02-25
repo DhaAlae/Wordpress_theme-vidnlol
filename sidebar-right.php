@@ -32,6 +32,13 @@
                               </a>
                           </div>
                           <div class='item-title'><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></div>
+                          <div class="comment-sidebar">
+                            <span class='fa fa-comment-o'></span><span class='post-comment-link'>
+                              <a class='comment-link' href='<?php the_permalink(); ?>' onclick=''>
+                                <?php comments_number( 'No comments', 'one comment', '% comments' ); ?>
+
+                              </a>
+                          </div>
                       </div>
                       <div style='clear: both;'></div>
                   </li>
